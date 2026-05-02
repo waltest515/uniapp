@@ -1,0 +1,35 @@
+name: Build UniApp H5
+on: [push] # Se lance à chaque fois que tu envoies du code
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # La version que tu as sur ton VPS
+
+      - name: Install dependencies
+        run: |
+          # On recrée un package.json si celui du repo est vide
+          if [ ! -s package.json ] || [ "$(cat package.json)" = "{}" ]; then
+            echo '{"scripts":{"build:h5":"vue-cli-service uni-build"}}' > package.json
+          fi
+          npm install @vue/cli-service @dcloudio/vue-cli-plugin-uni @dcloudio/uni-cli-shared @dcloudio/uni-template-compiler @dcloudio/uni-cli-i18n cross-env --save-dev
+          npm install
+
+      - name: Build H5
+        run: npx vue-cli-service uni-build
+        env:
+          NODE_ENV: production
+          UNI_PLATFORM: h5
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: h5-build-result
+          path: unpackage/dist/build/h5 # Le dossier que GitHub va zipper pour toi
