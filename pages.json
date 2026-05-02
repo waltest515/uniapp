@@ -1,0 +1,167 @@
+{
+	"easycom": {
+	        "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+			"^w-(.*)": "@/uni_modules/wmf-code/components/w-$1/w-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/airdrop/index",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/airdrop/test",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/friends",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/pledgeList",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/withdrawalList",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/incomeList",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/lang",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/yunpool",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/pledge",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/index/my",
+			"style": {
+				"navigationBarTitleText": "BSC POOL",
+				"navigationStyle": "custom",
+				"app-plus": {
+				    "titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "BSC POOL",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#BBBAC0",
+	    "selectedColor": "#FCD436",
+	    "borderStyle": "black",
+	    "backgroundColor": "#28272C",
+		"fontSize": "13px",
+		"height": "130rpx",
+	    "list": [{
+	            "pagePath": "pages/index/index",
+	            "iconPath": "/static/img/foot/home.png",
+	            "selectedIconPath": "/static/img/foot/home1.png",
+	            "text": "首页"
+	        },
+	        {
+	            "pagePath": "pages/index/yunpool",
+	            "iconPath": "/static/img/foot/pool.png",
+	            "selectedIconPath": "/static/img/foot/pool1.png",
+	            "text": "云矿池"
+	        },
+			{
+			    "pagePath": "pages/index/pledge",
+			    "iconPath": "/static/img/foot/zi.png",
+			    "selectedIconPath": "/static/img/foot/zi1.png",
+			    "text": "质押"
+			},
+			{
+			    "pagePath": "pages/index/my",
+			    "iconPath": "/static/img/foot/my.png",
+			    "selectedIconPath": "/static/img/foot/my1.png",
+			    "text": "我的"
+			}
+	    ]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
